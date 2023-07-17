@@ -1,0 +1,2 @@
+my_parcours
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/parcours/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/parcours/install -G Unix Makefiles

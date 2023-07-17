@@ -1,0 +1,18 @@
+<launch>
+	<!-- Stuff to deal with camera -->
+	<arg name="transport" default="compressed" />
+	<arg name="ns_base" default="turtlebotcam" />
+	<arg name="ns_repl" default="camera" />
+	<remap from="/$(arg ns_repl)/camera_info" to="/$(arg ns_base)/camera_info" />
+	<node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view" />
+	<node name="republisher" pkg="image_transport" type="republish" args="$(arg transport) in:=/$(arg ns_base)/image_raw raw out:=/$(arg ns_repl)/image_raw" output="screen" />
+	<node name="image_proc" pkg="image_proc" type="image_proc" ns="$(arg ns_repl)" />
+
+	<!-- Stuff to deal with lidar visualization -->
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find parcours)/lidar.rviz" output="screen" /> 
+
+	<!-- Our nodes to launch -->
+	<node name="detect" pkg="parcours" type="detect.py" output="screen"  />
+	<node name="cartography" pkg="parcours" type="cartography.py" output="screen" />
+</launch>
+

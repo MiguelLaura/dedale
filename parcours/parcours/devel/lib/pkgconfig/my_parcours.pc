@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/parcours/devel
+
+Name: my_parcours
+Description: Description of my_parcours
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
