@@ -27,7 +27,7 @@ roslaunch parcours parcours.launch # Lancer un ensemble de noeuds
 
 ## Pistes d'amélioration
 
-Le principal défaut de ce projet est qu'il fonctionne dans les conditions précises du labyrinthe où on ne croiserait qu'une flèche à chaque fois. De plus, il faut des conditions de luminosité égales pour toutes les flèches autrement nous n'arrivons pas à détecter entièrement la surface colorée, or c'est elle qui nous permet de déterminer quand nous sommes assez proche pour tourner. Une solution à ce problème serait d'utiliser le Lidar (ou le capteur ultrason) pour obtenir la distance du robot à la flèche. Enfin, tous les points du Lidar sont stockés, il faudrait enlever les doublons, ou utiliser une autre méthode de stockage (par exemple, dcouper l'espace en quadrillage et stocker une probabilité qu'une case soit vide).
+Le principal défaut de ce projet est qu'il fonctionne dans les conditions précises du labyrinthe où on ne croiserait qu'une flèche à chaque fois. De plus, il faut des conditions de luminosité égales pour toutes les flèches autrement nous n'arrivons pas à détecter entièrement la surface colorée, or c'est elle qui nous permet de déterminer quand nous sommes assez proche pour tourner. Une solution à ce problème serait d'utiliser le Lidar (ou le capteur ultrason) pour obtenir la distance du robot à la flèche. Enfin, tous les points du Lidar sont stockés, il faudrait enlever les doublons, ou utiliser une autre méthode de stockage (par exemple, découper l'espace en quadrillage et stocker une probabilité qu'une case soit vide).
 
 ## Contributrices
 
